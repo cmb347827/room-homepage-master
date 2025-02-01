@@ -1,0 +1,108 @@
+.display-flex {
+  display: flex; }
+
+.direction-row {
+  flex-direction: row; }
+
+.direction-column {
+  flex-direction: column; }
+
+.no-wrap {
+  flex-wrap: nowrap; }
+
+.wrap {
+  flex-wrap: wrap; }
+
+.column-wrap {
+  flex-flow: column wrap; }
+
+.justify-content-center {
+  justify-content: center; }
+
+.justify-content-start {
+  justify-content: start; }
+
+.justify-content-space-between {
+  justify-content: space-between; }
+
+.justify-content-space-around {
+  justify-content: space-around; }
+
+@media screen and (min-width: 768px) {
+  .justify-content-md-space-between {
+    justify-content: space-between; } }
+
+@media screen and (min-width: 768px) {
+  .justify-content-md-space-around {
+    justify-content: space-around; } }
+
+@media screen and (min-width: 768px) {
+  .justify-content-md-start {
+    justify-content: start; } }
+
+.align-items-center {
+  align-items: center; }
+
+.align-items-flex-start {
+  align-items: flex-start; }
+
+.align-items-stretch {
+  align-items: stretch; }
+
+.align-content-stretch {
+  align-content: stretch; }
+
+.align-content-between {
+  align-content: space-between; }
+
+.align-self-start {
+  align-self: flex-start; }
+
+.flex-basis-25 {
+  flex-basis: 25%; }
+
+.flex-basis-40 {
+  flex-basis: 40%; }
+
+.me-2 {
+  margin-right: 2em; }
+
+.colRow {
+  flex-direction: column; }
+  @media screen and (min-width: 768px) {
+    .colRow {
+      flex-direction: row; } }
+
+.rowCol {
+  flex-direction: row; }
+  @media screen and (min-width: 768px) {
+    .rowCol {
+      flex-direction: column; } }
+
+*,
+::before,
+::after {
+  box-sizing: border-box; }
+
+html,
+body {
+  background-color: Snow;
+  background-color: white;
+  color: black;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "./fonts/League Spartan", serif; }
+
+.text-center {
+  align-text: center; }
+
+footer {
+  position: relative;
+  top: 10em; }
+  @media screen and (min-width: 768px) {
+    footer {
+      padding: 4em;
+      font-size: 1.2em; } }
+
+/*# sourceMappingURL=room-homepage-master.css.map */
