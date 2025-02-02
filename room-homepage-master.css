@@ -79,6 +79,24 @@
     .rowCol {
       flex-direction: column; } }
 
+@media screen and (max-width: 767px) {
+  ul {
+    display: none; }
+
+  ul.is-active {
+    display: block; } }
+#close {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(3%) saturate(3990%) hue-rotate(191deg) brightness(106%) contrast(105%); }
+
+@media screen and (min-width: 767px) {
+  #menubutton {
+    display: none; }
+
+  #navbarCollapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; } }
 *,
 ::before,
 ::after {
@@ -95,7 +113,10 @@ body {
   font-family: "./fonts/League Spartan", serif; }
 
 .text-center {
-  align-text: center; }
+  text-align: center; }
+
+.hidden {
+  display: none; }
 
 footer {
   position: relative;

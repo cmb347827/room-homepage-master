@@ -1,5 +1,6 @@
 @import '_globals.scss';
 @import '_flexgrid.scss';
+@import 'hamburgermenu.scss';
 
 $colors: (
   
@@ -48,7 +49,10 @@ body {
   }
 }
 .text-center{
-    align-text:center;
+    text-align:center;
+}
+.hidden{
+    display:none;
 }
 
 footer{
