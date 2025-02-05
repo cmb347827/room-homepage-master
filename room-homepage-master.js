@@ -52,7 +52,7 @@ function addListener(){
 }
 
 $(window).on('load',function(){
-   /* addListener();
+    /*addListener();
 	const navbar= document.getElementById('navbarCollapse');
 
 	$("#menubutton").on("click", function(){
@@ -80,6 +80,7 @@ $(window).on('load',function(){
 		$(data.navBar).toggleClass('is-active');
 		$('#open').toggleClass('hidden');
 		$('#close').toggleClass('hidden');
-		data.navBar.toggleAttribute('aria-expanded');
+	    data.navBtn.toggleAttribute('aria-expanded');
 	});
 });
+

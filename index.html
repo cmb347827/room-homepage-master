@@ -13,46 +13,138 @@
   
 </head>
 <body>
-     <header>
-          <nav>
-              <button aria-label='Menu' id='menubutton' type="button" class="" aria-controls="navbarCollapse">
-                 <svg id='open' xmlns="http://www.w3.org/2000/svg" width="18" height="15"><path fill="#242A45" fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"/></svg>
-                 <svg class='hidden' id='close' xmlns="http://www.w3.org/2000/svg" width="16" height="15"><path fill="#FFF" fill-rule="evenodd" d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"/></svg>
-              </button>
-              <ul aria-label='Primary navigation' id='navbarCollapse' aria-expanded="false">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href='#'>Contact</a></li>
-              </ul>
-          </nav>
-     </header>
-     <main>
-
-            Discover innovative ways to decorate
-
-            We provide unmatched quality, comfort, and style for property owners across the country. 
-            Our experts combine form and function in bringing your vision to life. Create a room in your 
-            own style with our collection and make your property a reflection of you and what you love.
-
-            Shop now
-
-            We are available all across the globe
-
-            With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-            Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-            store locator. Any questions? Don't hesitate to contact us today.
-
-            Shop now
-
-            Manufactured with the best materials
-
-            Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-            to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-            experience in this industry, we understand what customers want for their home and office.
-
-            Shop now
-      </main>
+      <div class="display-flex colRow">
+        <header class="flex-basis-60-md ">
+              <nav>
+                  <button aria-label='Menu' id='menubutton' type="button" class=""  aria-expanded="false" aria-controls="navbarCollapse">
+                    <svg id='open' xmlns="http://www.w3.org/2000/svg" width="18" height="15"><path fill="#242A45" fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"/></svg>
+                    <svg class='hidden' id='close' xmlns="http://www.w3.org/2000/svg" width="16" height="15"><path fill="#FFF" fill-rule="evenodd" d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"/></svg>
+                  </button>
+                  <ul aria-label='Primary navigation' id='navbarCollapse'>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href='#'>Contact</a></li>
+                  </ul>
+              </nav>
+        </header>
+        <main class="flex-basis-40-md">
+            <section id="myCarousel"
+                        class="carousel"
+                        aria-roledescription="carousel"
+                        aria-label="Highlighted television shows">
+                <div class="carousel-inner">
+                  <div class="controls">
+                    <button type="button"
+                            class="previous"
+                            aria-controls="myCarousel-items"
+                            aria-label="Previous Slide">
+                      <svg width="42"
+                            height="34"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                        <rect class="background"
+                              x="2"
+                              y="2"
+                              rx="5"
+                              ry="5"
+                              width="38"
+                              height="24"></rect>
+                        <rect class="border"
+                              x="4"
+                              y="4"
+                              rx="5"
+                              ry="5"
+                              width="34"
+                              height="20"></rect>
+                        <polygon points="9 14 21 8 21 11 33 11 33 17 21 17 21 20"></polygon>
+                      </svg>
+                    </button>
+                    <button type="button"
+                            class="next"
+                            aria-controls="myCarousel-items"
+                            aria-label="Next Slide">
+                      <svg width="42"
+                            height="34"
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                        <rect class="background"
+                              x="2"
+                              y="2"
+                              rx="5"
+                              ry="5"
+                              width="38"
+                              height="24"></rect>
+                        <rect class="border"
+                              x="4"
+                              y="4"
+                              rx="5"
+                              ry="5"
+                              width="34"
+                              height="20"></rect>
+                        <polygon points="9 11 21 11 21 8 33 14 21 20 21 17 9 17"></polygon>
+                      </svg>
+                    </button>
+                  </div>
+                  <div id="myCarousel-items"
+                        class="carousel-items"
+                        aria-live="off">
+                       <div class="carousel-item active display-flex colRow"
+                              role="group"
+                              aria-roledescription="slide"
+                              aria-label="1 of 3">
+                              <picture>
+                                  <source srcset="./images/desktop-image-hero-1.jpg" media="(min-width: 768px)" />
+                                  <img src="./images/mobile-image-hero-1.jpg" alt="MDN" />
+                              </picture>
+                              <div class="carousel-caption">
+                                  <h2>Discover innovative ways to decorate</h2>
+                                  <p>We provide unmatched quality, comfort, and style for property owners across the country. 
+                                    Our experts combine form and function in bringing your vision to life. Create a room in your 
+                                    own style with our collection and make your property a reflection of you and what you love
+                                  </p>
+                                  <button>Shop now</button>
+                              </div>
+                        </div>
+                        <div class="carousel-item"
+                              role="group"
+                              aria-roledescription="slide"
+                              aria-label="2 of 3">
+                              <picture class="carousel-image">
+                                  <source srcset="./images/desktop-image-hero-2.jpg" media="(min-width: 768px)" />
+                                  <img src="./images/mobile-image-hero-2.jpg" alt="MDN" />
+                              </picture>
+                              <div class="carousel-caption">
+                                  <h2>We are available all across the globe</h2>
+                                  <p>With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+                                    Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+                                    store locator. Any questions? Don't hesitate to contact us today.
+                                  </p>
+                                  <button>Shop now</button>
+                              </div>
+                        </div>
+                        <div class="carousel-item"
+                              role="group"
+                              aria-roledescription="slide"
+                              aria-label="3 of 3">
+                              <picture>
+                                   <source srcset="./images/desktop-image-hero-3.jpg" media="(min-width: 768px)" />
+                                   <img src="./images/mobile-image-hero-3.jpg" alt="MDN" />
+                              </picture>
+                              <div class="carousel-caption">
+                                  <h2>Manufactured with the best materials</h2>
+                                  <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+                                    to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+                                    experience in this industry, we understand what customers want for their home and office.                
+                                  </p>
+                                  <button>Shop now</button>
+                              </div>
+                        </div>
+                   </div>
+                </div>
+              </section>
+          </main>
+      </div>
       <aside>
             About our furniture
 
@@ -70,5 +162,9 @@
    
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous"></script>
    <script src='room-homepage-master.js'></script>
+   <!-- Content to show if JavaScript is disabled -->
+   <noscript>
+      <p style="color: red;">JavaScript is disabled in your browser. Please enable it to view this site properly.</p>
+   </noscript>
 </body>
 </html>

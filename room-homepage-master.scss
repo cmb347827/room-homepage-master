@@ -1,6 +1,7 @@
 @import '_globals.scss';
 @import '_flexgrid.scss';
 @import 'hamburgermenu.scss';
+@import 'carousel.scss';
 
 $colors: (
   
@@ -54,15 +55,32 @@ body {
 .hidden{
     display:none;
 }
+@media (scripting: enabled) {
+  
 
-footer{
+      header{
+
+          a{
+            text-decoration: none;
+          }
+          ul li{
+            list-style-type: none;
+          }
+      }
+      footer{
+              
         
-   
-   position:relative;
-   top: 10em;
-    
-  @media screen and(min-width:768px){
-    @include padding(4em);
-    font-size:1.2em;
-  }
+        position:relative;
+        top: 10em;
+          
+        @media screen and(min-width:768px){
+          @include padding(4em);
+          font-size:1.2em;
+        }
+      }
+}
+@media (scripting: none) {
+  
+  /* fallback styles when JS is not supported */
+  
 }

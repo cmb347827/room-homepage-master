@@ -4,7 +4,10 @@
       }
       
     ul.is-active {
-        display: block;
+        display:flex;
+        flex-direction:row;
+        justify-content: flex-end;
+        
     }
 }
 
