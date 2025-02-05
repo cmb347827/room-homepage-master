@@ -37,6 +37,8 @@
                   <div class="controls">
                     <button type="button"
                             class="previous"
+                            title="Previous slide"
+                            id="prevBtn"
                             aria-controls="myCarousel-items"
                             aria-label="Previous Slide">
                       <svg width="42"
@@ -62,6 +64,8 @@
                     </button>
                     <button type="button"
                             class="next"
+                            id="nextBtn"
+                            title="Next slide"
                             aria-controls="myCarousel-items"
                             aria-label="Next Slide">
                       <svg width="42"
@@ -93,7 +97,7 @@
                               role="group"
                               aria-roledescription="slide"
                               aria-label="1 of 3">
-                              <picture>
+                              <picture class="">
                                   <source srcset="./images/desktop-image-hero-1.jpg" media="(min-width: 768px)" />
                                   <img src="./images/mobile-image-hero-1.jpg" alt="MDN" />
                               </picture>

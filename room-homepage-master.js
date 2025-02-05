@@ -50,32 +50,38 @@ function addListener(){
 		});
 	});
 }
+const carouselItems = document.querySelectorAll('.carousel-item');
+let currentIndex = 0;
+
+function showSlide(index) {
+  // Hide all carousel items
+  carouselItems.forEach(item => {
+    item.style.display = 'none';
+  });
+  // Show the slide at the specified index
+  carouselItems[index].style.display = 'flex';
+}
+
+function nextSlide() {
+  
+  currentIndex = ((currentIndex + 1) <= (carouselItems.length-1)) ? ++currentIndex : 0;
+  showSlide(currentIndex);
+}
+
+function previousSlide() {
+  currentIndex = ((currentIndex - 1) >= 0 ) ? --currentIndex : (carouselItems.length-1);
+  showSlide(currentIndex);
+}
+
+// Show the first slide initially
+showSlide(currentIndex);
+
+// Set up event listeners for next and previous buttons
+document.getElementById('nextBtn').addEventListener('click', nextSlide);
+document.getElementById('prevBtn').addEventListener('click', previousSlide);
 
 $(window).on('load',function(){
-    /*addListener();
-	const navbar= document.getElementById('navbarCollapse');
-
-	$("#menubutton").on("click", function(){
-        
-		$('#open').toggleClass('hidden');
-		$('#close').toggleClass('hidden');
-		$('#nav').toggleClass('custom-nav');
-		document.querySelector('#navbarCollapse').classList.toggle("hidden");
-		navbar.toggleAttribute('aria-expanded');
-    });
-	
-	$(data.subscribe).on('click',function(){
-		dataFailed();
-	});
-    //User has pressed the keyboard ,and entered some data in the input field
-    data.email.addEventListener('keyup',keyUp);
-    data.email.addEventListener('keypress',keyPress);
-
-    data.subscribe.addEventListener('click',(e)=>{
-        e.preventDefault();
-		keyPress(e);
-	})
-	*/
+    
 	data.navBtn.addEventListener('click', function(){
 		$(data.navBar).toggleClass('is-active');
 		$('#open').toggleClass('hidden');
