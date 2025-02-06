@@ -2,12 +2,12 @@
 
 .carousel {
       .carousel-inner{
-         position:relative;
+         //position:relative;
       }
       .carousel-inner{
             .controls{
                 position: absolute;
-                top: 20em;
+                top:24em;
                 right: 0;
                 z-index: 10;
                 display: flex;
@@ -47,21 +47,23 @@
                    }
                 }
                 @media screen and(min-width: 768px){
-                   top: 20em;
-                   left: 5em;
+                   top: 15em;
+                   left:30em;
                 }
             }
-            .carousel-item{
-                display: none;
-                max-height: 400px;
-                max-width: 900px;
-                position: relative;
-                overflow: hidden;
-                width: 100%;
+            .carousel-items{
+                   width: 100vw;
+                  .carousel-item{
+                    display: none;
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                  }
+                 .active{
+                    display:flex;
+                  }
             }
-            .active{
-                display:flex;
-            }
+            
             
       }
 }

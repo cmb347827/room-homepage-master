@@ -72,9 +72,23 @@
 .flex-basis-40 {
   flex-basis: 40%; }
 
+.grow-4 {
+  flex-grow: 4; }
+
+.flex-1 {
+  flex: 1; }
+
 @media screen and (min-width: 768px) {
   .flex-basis-25-md {
     flex-basis: 25%; } }
+
+@media screen and (min-width: 768px) {
+  .flex-basis-80-md {
+    flex-basis: 80%; } }
+
+@media screen and (min-width: 768px) {
+  .flex-basis-20-md {
+    flex-basis: 20%; } }
 
 @media screen and (min-width: 768px) {
   .flex-basis-40-md {
@@ -123,11 +137,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center; } }
-.carousel .carousel-inner {
-  position: relative; }
 .carousel .carousel-inner .controls {
   position: absolute;
-  top: 20em;
+  top: 24em;
   right: 0;
   z-index: 10;
   display: flex;
@@ -159,17 +171,17 @@
     stroke: white; }
   @media screen and (min-width: 768px) {
     .carousel .carousel-inner .controls {
-      top: 20em;
-      left: 5em; } }
-.carousel .carousel-inner .carousel-item {
-  display: none;
-  max-height: 400px;
-  max-width: 900px;
-  position: relative;
-  overflow: hidden;
-  width: 100%; }
-.carousel .carousel-inner .active {
-  display: flex; }
+      top: 15em;
+      left: 30em; } }
+.carousel .carousel-inner .carousel-items {
+  width: 100vw; }
+  .carousel .carousel-inner .carousel-items .carousel-item {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%; }
+  .carousel .carousel-inner .carousel-items .active {
+    display: flex; }
 
 *,
 ::before,
@@ -205,13 +217,9 @@ body {
 
 @media (scripting: enabled) {
   header a {
-    text-decoration: none;
-    color: white; }
+    text-decoration: none; }
   header ul li {
     list-style-type: none; }
-
-  section {
-    width: fit-content; }
 
   footer {
     position: relative;

@@ -64,7 +64,7 @@ body {
 .move-left-15em-md{
    position:relative;
    @media screen and(min-width: 768px){
-       right: 15em;
+      right: 15em;
    }
 }
 @media (scripting: enabled) {
@@ -73,14 +73,14 @@ body {
 
           a{
             text-decoration: none;
-            color: white;
+            //color: white;
           }
           ul li{
             list-style-type: none;
           }
       }
       section{
-          width: fit-content;
+          //width: fit-content;
           
       }
       footer{
