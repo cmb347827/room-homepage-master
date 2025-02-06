@@ -63,12 +63,26 @@
     align-self:flex-start;
 }
 
-
+.flex-3-md{
+    @media screen and(min-width:768px){
+        flex: 3;
+    }
+}
+.flex-2-md{
+    @media screen and(min-width:768px){
+        flex: 2;
+    }
+}
 .flex-basis-25{
     flex-basis:25%;
 }
 .flex-basis-40{
     flex-basis: 40%;
+}
+.flex-basis-25-md{
+    @media screen and(min-width:768px){
+        flex-basis: 25%;
+    }
 }
 .flex-basis-40-md{
     @media screen and(min-width:768px){
@@ -85,7 +99,11 @@
 .me-2{
     margin-right: 2em;
 }
-
+.me-1-md{
+    @media screen and(min-width: 768px){
+        margin-right: 1em;
+     }
+}
 .colRow{
     flex-direction:column;
     @media screen and(min-width:768px){

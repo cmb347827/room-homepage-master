@@ -55,17 +55,33 @@ body {
 .hidden{
     display:none;
 }
+.top-z-index{
+  //needed for z-index.
+  position: relative;
+  z-index: 1;
+  opacity:1;
+}
+.move-left-15em-md{
+   position:relative;
+   @media screen and(min-width: 768px){
+       right: 15em;
+   }
+}
 @media (scripting: enabled) {
-  
-
+      
       header{
 
           a{
             text-decoration: none;
+            color: white;
           }
           ul li{
             list-style-type: none;
           }
+      }
+      section{
+          width: fit-content;
+          
       }
       footer{
               
@@ -82,5 +98,6 @@ body {
 @media (scripting: none) {
   
   /* fallback styles when JS is not supported */
-  
+  /*leave carousel collapsed but add some styling */
+
 }

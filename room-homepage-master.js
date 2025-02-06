@@ -8,11 +8,16 @@ $(window).resize(function(){
 const data ={
 	 navBtn: document.getElementById('menubutton'),
 	 navBar: document.getElementById('navbarCollapse'),
+	 currentIndex: 0,
+	 carouselItems : document.querySelectorAll('.carousel-item'),
 }
 
 
 function addListener(){
-	
+	// Set up event listeners for next and previous buttons
+    document.getElementById('nextBtn').addEventListener('click', nextSlide);
+    document.getElementById('prevBtn').addEventListener('click', previousSlide);
+
 	[...document.querySelectorAll('.accordion-trigger')].forEach(function(btn) {
 		btn.addEventListener('click', function() {
 			/*const exp= btn.getAttribute('aria-expanded');
@@ -50,38 +55,31 @@ function addListener(){
 		});
 	});
 }
-const carouselItems = document.querySelectorAll('.carousel-item');
-let currentIndex = 0;
+
 
 function showSlide(index) {
   // Hide all carousel items
-  carouselItems.forEach(item => {
+  data.carouselItems.forEach(item => {
     item.style.display = 'none';
   });
   // Show the slide at the specified index
-  carouselItems[index].style.display = 'flex';
+  data.carouselItems[index].style.display = 'flex';
 }
 
 function nextSlide() {
-  
-  currentIndex = ((currentIndex + 1) <= (carouselItems.length-1)) ? ++currentIndex : 0;
-  showSlide(currentIndex);
+  data.currentIndex = ((data.currentIndex + 1) <= (data.carouselItems.length-1)) ? ++data.currentIndex : 0;
+  showSlide(data.currentIndex);
 }
 
 function previousSlide() {
-  currentIndex = ((currentIndex - 1) >= 0 ) ? --currentIndex : (carouselItems.length-1);
-  showSlide(currentIndex);
+  data.currentIndex = ((data.currentIndex - 1) >= 0 ) ? --data.currentIndex : (data.carouselItems.length-1);
+  showSlide(data.currentIndex);
 }
 
-// Show the first slide initially
-showSlide(currentIndex);
-
-// Set up event listeners for next and previous buttons
-document.getElementById('nextBtn').addEventListener('click', nextSlide);
-document.getElementById('prevBtn').addEventListener('click', previousSlide);
 
 $(window).on('load',function(){
     
+	addListener();
 	data.navBtn.addEventListener('click', function(){
 		$(data.navBar).toggleClass('is-active');
 		$('#open').toggleClass('hidden');

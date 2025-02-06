@@ -6,7 +6,50 @@
       }
       .carousel-inner{
             .controls{
-
+                position: absolute;
+                top: 20em;
+                right: 0;
+                z-index: 10;
+                display: flex;
+                
+                padding: 0.25em 1.25em 0;
+                button{
+                    position: absolute;
+                    z-index: 10;
+                    flex: 0 0 auto;
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    background: transparent;
+                    outline: none;
+                    &.next{
+                       right: 20px;
+                    }
+                    &.previous{
+                       right: 70px;
+                    }
+                }
+                svg{
+                   .background{
+                      stroke: black;
+                      fill: black;
+                      stroke-width: 1px;
+                      opacity: 0.6;
+                      &:focus,&:hover{
+                        fill: #005a9c;
+                        stroke: #005a9c;
+                        opacity: 1;
+                      }
+                   }
+                   polygon{
+                      fill: white;
+                      stroke: white;
+                   }
+                }
+                @media screen and(min-width: 768px){
+                   top: 20em;
+                   left: 5em;
+                }
             }
             .carousel-item{
                 display: none;
@@ -23,61 +66,10 @@
       }
 }
 
-.carousel .controls {
-  position: absolute;
-  top: 20em;
-  left: -42em;
-  z-index: 10;
-  display: flex;
-  width: 100%;
-  padding: 0.25em 1.25em 0;
-}
-
-.carousel .controls button {
-  position: absolute;
-  z-index: 10;
-  flex: 0 0 auto;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-  outline: none;
-}
-
-.carousel .controls button.previous {
-  right: 70px;
-}
-
-.carousel .controls button.next {
-  right: 18px;
-}
-
-/* SVG Controls */
-
-.carousel .controls svg .background {
-  stroke: black;
-  fill: black;
-  stroke-width: 1px;
-  opacity: 0.6;
-}
 
 
-.carousel .controls svg polygon {
-  fill: white;
-  stroke: white;
-}
 
-.carousel .controls button:focus svg .background,
-.carousel .controls button:hover svg .background,
-.carousel .controls button:hover svg .border {
-  fill: #005a9c;
-  stroke: #005a9c;
-  opacity: 1;
-}
 
-.carousel .controls button:focus svg .border {
-  stroke: white;
-}
 
 
 

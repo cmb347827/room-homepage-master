@@ -14,32 +14,32 @@
 </head>
 <body>
       <div class="display-flex colRow">
-        <header class="flex-basis-60-md ">
+        <header class="top-z-index">
               <nav>
                   <button aria-label='Menu' id='menubutton' type="button" class=""  aria-expanded="false" aria-controls="navbarCollapse">
                     <svg id='open' xmlns="http://www.w3.org/2000/svg" width="18" height="15"><path fill="#242A45" fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"/></svg>
                     <svg class='hidden' id='close' xmlns="http://www.w3.org/2000/svg" width="16" height="15"><path fill="#FFF" fill-rule="evenodd" d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"/></svg>
                   </button>
                   <ul aria-label='Primary navigation' id='navbarCollapse'>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#" class="me-1-md">Home</a></li>
+                    <li><a href="#" class="me-1-md">Shop</a></li>
+                    <li><a href="#" class="me-1-md">About</a></li>
                     <li><a href='#'>Contact</a></li>
                   </ul>
               </nav>
         </header>
-        <main class="flex-basis-40-md">
+        <main class="move-left-15em-md">
             <section id="myCarousel"
                         class="carousel"
                         aria-roledescription="carousel"
-                        aria-label="Highlighted television shows">
+                        aria-label="Why are products are better descriptions">
                 <div class="carousel-inner">
                   <div class="controls">
                     <button type="button"
                             class="previous"
                             title="Previous slide"
                             id="prevBtn"
-                            aria-controls="myCarousel-items"
+                            aria-controls="homepage-image-carousel"
                             aria-label="Previous Slide">
                       <svg width="42"
                             height="34"
@@ -66,7 +66,7 @@
                             class="next"
                             id="nextBtn"
                             title="Next slide"
-                            aria-controls="myCarousel-items"
+                            aria-controls="homepage-image-carousel"
                             aria-label="Next Slide">
                       <svg width="42"
                             height="34"
@@ -90,18 +90,22 @@
                       </svg>
                     </button>
                   </div>
-                  <div id="myCarousel-items"
+                  <div id="homepage-image-carousel"
                         class="carousel-items"
-                        aria-live="off">
+                        aria-live="polite">
                        <div class="carousel-item active display-flex colRow"
                               role="group"
                               aria-roledescription="slide"
                               aria-label="1 of 3">
-                              <picture class="">
-                                  <source srcset="./images/desktop-image-hero-1.jpg" media="(min-width: 768px)" />
-                                  <img src="./images/mobile-image-hero-1.jpg" alt="MDN" />
-                              </picture>
-                              <div class="carousel-caption">
+                              <img class=""
+                                  alt="Image of a white chair and a set table"
+                                  srcset="
+                                    ./images/mobile-image-hero-1.jpg  768w,
+                                    ./images/desktop-image-hero-1.jpg  769w,
+                                  "
+                                  sizes="60vmin"
+                                >
+                              <div class="carousel-text ">
                                   <h2>Discover innovative ways to decorate</h2>
                                   <p>We provide unmatched quality, comfort, and style for property owners across the country. 
                                     Our experts combine form and function in bringing your vision to life. Create a room in your 
@@ -110,14 +114,18 @@
                                   <button>Shop now</button>
                               </div>
                         </div>
-                        <div class="carousel-item"
+                        <div class="carousel-item display-flex colRow"
                               role="group"
                               aria-roledescription="slide"
                               aria-label="2 of 3">
-                              <picture class="carousel-image">
-                                  <source srcset="./images/desktop-image-hero-2.jpg" media="(min-width: 768px)" />
-                                  <img src="./images/mobile-image-hero-2.jpg" alt="MDN" />
-                              </picture>
+                              <img 
+                                  alt="Image of yellow and green chairs"
+                                  srcset="
+                                    ./images/mobile-image-hero-2.jpg  768w,
+                                    ./images/desktop-image-hero-2.jpg  769w,
+                                  "
+                                  sizes="60vmin"
+                                >
                               <div class="carousel-caption">
                                   <h2>We are available all across the globe</h2>
                                   <p>With stores all over the world, it's easy for you to find furniture for your home or place of business. 
@@ -127,14 +135,18 @@
                                   <button>Shop now</button>
                               </div>
                         </div>
-                        <div class="carousel-item"
+                        <div class="carousel-item display-flex colRow"
                               role="group"
                               aria-roledescription="slide"
                               aria-label="3 of 3">
-                              <picture>
-                                   <source srcset="./images/desktop-image-hero-3.jpg" media="(min-width: 768px)" />
-                                   <img src="./images/mobile-image-hero-3.jpg" alt="MDN" />
-                              </picture>
+                              <img 
+                                  alt="Image of a black chairs"
+                                  srcset="
+                                    ./images/mobile-image-hero-3.jpg  768w,
+                                    ./images/desktop-image-hero-3.jpg  769w,
+                                  "
+                                  sizes="60vmin"
+                                >
                               <div class="carousel-caption">
                                   <h2>Manufactured with the best materials</h2>
                                   <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
