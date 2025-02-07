@@ -1,77 +1,66 @@
 
 
 .carousel {
-      .carousel-inner{
-         //position:relative;
-      }
-      .carousel-inner{
-            .controls{
-                position: absolute;
-                top:24em;
-                right: 0;
-                z-index: 10;
-                display: flex;
-                
-                padding: 0.25em 1.25em 0;
-                button{
-                    position: absolute;
-                    z-index: 10;
-                    flex: 0 0 auto;
-                    margin: 0;
-                    padding: 0;
-                    border: none;
-                    background: transparent;
-                    outline: none;
-                    &.next{
-                       right: 20px;
-                    }
-                    &.previous{
-                       right: 70px;
-                    }
-                }
-                svg{
-                   .background{
-                      stroke: black;
-                      fill: black;
-                      stroke-width: 1px;
-                      opacity: 0.6;
-                      &:focus,&:hover{
-                        fill: #005a9c;
-                        stroke: #005a9c;
-                        opacity: 1;
-                      }
-                   }
-                   polygon{
-                      fill: white;
-                      stroke: white;
+   
+   .carousel-inner{
+          position:relative;
+          
+         .controls{
+             position: relative;
+             transform:translate(300px,360px);
+             z-index: 10;
+             display: flex;
+             
+             
+             button{
+                 z-index: 10;
+                 flex: 0 0 auto;
+                 margin: 0;
+                 padding: 0;
+                 border: none;
+                 background: transparent;
+             }
+             svg{
+                .background{
+                   stroke: black;
+                   fill: black;
+                   stroke-width: 1px;
+                   opacity: 0.6;
+                   &:focus,&:hover{
+                     fill: #005a9c;
+                     stroke: #005a9c;
+                     opacity: 1;
                    }
                 }
-                @media screen and(min-width: 768px){
-                   top: 15em;
-                   left:30em;
+                polygon{
+                   fill: white;
+                   stroke: white;
                 }
-            }
-            .carousel-items{
-                   width: 100vw;
-                  .carousel-item{
-                    display: none;
-                    position: relative;
-                    overflow: hidden;
-                    width: 100%;
-                  }
-                 .active{
-                    display:flex;
-                  }
-            }
-            
-            
-      }
+             }
+             @media screen and(min-width: 768px){
+                transform:translate(840px, 534px);
+             }
+         }
+         .carousel-items{
+                width: 100vw;
+               .carousel-item{
+                 display: none;
+                 position: relative;
+               }
+              .active{
+                 display:flex;
+               }
+               .carousel-text{
+                   padding: 10px;
+                   max-width: 100%;
+                   @media screen and(min-width:768px){
+                     padding: 0 25px;
+                     min-width: 40%;
+                   }
+                   
+               }
+         }
+         
+         
+   }
 }
-
-
-
-
-
-
-
-

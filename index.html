@@ -12,8 +12,8 @@
 
   
 </head>
-<body>
-      <div class="display-flex colRow">
+<body class="border-blue">
+      <div class="display-flex colRow border-red">
         <header class="top-z-index">
               <nav>
                   <button aria-label='Menu' id='menubutton' type="button" class=""  aria-expanded="false" aria-controls="navbarCollapse">
@@ -28,9 +28,9 @@
                   </ul>
               </nav>
         </header>
-        <main class="move-left-15em-md">
+        <main class="move-left-15em-md border-blue">
             <section id="myCarousel"
-                        class="carousel"
+                        class="carousel border-red"
                         aria-roledescription="carousel"
                         aria-label="Why are products are better descriptions">
                 <div class="carousel-inner">
@@ -97,15 +97,25 @@
                               role="group"
                               aria-roledescription="slide"
                               aria-label="1 of 3">
-                              <img class=""
+                              <picture class="">
+                                  <source class="img-fluid"
+                                    srcset="./images/desktop-image-hero-1.jpg"
+                                    media="(min-width: 768px)"
+                                  />
+                                  <img 
+                                    src="./images/mobile-image-hero-1.jpg " 
+                                    alt=""
+                                  />
+                              </picture>
+                              <!--img class=""
                                   alt="Image of a white chair and a set table"
                                   srcset="
                                     ./images/mobile-image-hero-1.jpg  768w,
                                     ./images/desktop-image-hero-1.jpg  769w,
                                   "
                                   sizes="60vmin"
-                              >
-                              <div class="carousel-text grow-4">
+                               -->
+                              <div class="carousel-text ">
                                   <h2>Discover innovative ways to decorate</h2>
                                   <p>We provide unmatched quality, comfort, and style for property owners across the country. 
                                     Our experts combine form and function in bringing your vision to life. Create a room in your 
@@ -118,15 +128,25 @@
                               role="group"
                               aria-roledescription="slide"
                               aria-label="2 of 3">
-                              <img 
+                              <picture class=''>
+                                  <source 
+                                    srcset="./images/desktop-image-hero-2.jpg"
+                                    media="(min-width: 768px)"
+                                  />
+                                  <img 
+                                    src="./images/mobile-image-hero-2.jpg " 
+                                    alt=""
+                                  />
+                              </picture>
+                              <!--img 
                                   alt="Image of yellow and green chairs"
                                   srcset="
                                     ./images/mobile-image-hero-2.jpg  768w,
                                     ./images/desktop-image-hero-2.jpg  769w,
                                   "
                                   sizes="60vmin"
-                                >
-                              <div class="carousel-caption">
+                              -->
+                              <div class="carousel-text ">
                                   <h2>We are available all across the globe</h2>
                                   <p>With stores all over the world, it's easy for you to find furniture for your home or place of business. 
                                     Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
@@ -139,15 +159,25 @@
                               role="group"
                               aria-roledescription="slide"
                               aria-label="3 of 3">
-                              <img 
+                              <picture class="">
+                                  <source 
+                                    srcset="./images/desktop-image-hero-3.jpg"
+                                    media="(min-width: 768px)"
+                                  />
+                                  <img 
+                                    src="./images/mobile-image-hero-3.jpg " 
+                                    alt=""
+                                  />
+                              </picture>
+                              <!--img 
                                   alt="Image of a black chairs"
                                   srcset="
                                     ./images/mobile-image-hero-3.jpg  768w,
                                     ./images/desktop-image-hero-3.jpg  769w,
                                   "
                                   sizes="60vmin"
-                                >
-                              <div class="carousel-caption">
+                              -->
+                              <div class="carousel-text ">
                                   <h2>Manufactured with the best materials</h2>
                                   <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
                                     to ensure that every product is made as perfect and as consistent as possible. With three decades of 

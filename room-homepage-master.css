@@ -22,6 +22,9 @@
 .justify-content-start {
   justify-content: start; }
 
+.justify-content-flex-end {
+  justify-content: flex-end; }
+
 .justify-content-space-between {
   justify-content: space-between; }
 
@@ -46,6 +49,9 @@
 .align-items-flex-start {
   align-items: flex-start; }
 
+align-items-flex-end {
+  align-items: flex-end; }
+
 .align-items-stretch {
   align-items: stretch; }
 
@@ -57,6 +63,10 @@
 
 .align-self-start {
   align-self: flex-start; }
+
+@media screen and (min-width: 768px) {
+  .flex-1-md {
+    flex: 1; } }
 
 @media screen and (min-width: 768px) {
   .flex-3-md {
@@ -74,9 +84,6 @@
 
 .grow-4 {
   flex-grow: 4; }
-
-.flex-1 {
-  flex: 1; }
 
 @media screen and (min-width: 768px) {
   .flex-basis-25-md {
@@ -137,51 +144,49 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center; } }
-.carousel .carousel-inner .controls {
-  position: absolute;
-  top: 24em;
-  right: 0;
-  z-index: 10;
-  display: flex;
-  padding: 0.25em 1.25em 0; }
-  .carousel .carousel-inner .controls button {
-    position: absolute;
-    z-index: 10;
-    flex: 0 0 auto;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent;
-    outline: none; }
-    .carousel .carousel-inner .controls button.next {
-      right: 20px; }
-    .carousel .carousel-inner .controls button.previous {
-      right: 70px; }
-  .carousel .carousel-inner .controls svg .background {
-    stroke: black;
-    fill: black;
-    stroke-width: 1px;
-    opacity: 0.6; }
-    .carousel .carousel-inner .controls svg .background:focus, .carousel .carousel-inner .controls svg .background:hover {
-      fill: #005a9c;
-      stroke: #005a9c;
-      opacity: 1; }
-  .carousel .carousel-inner .controls svg polygon {
-    fill: white;
-    stroke: white; }
-  @media screen and (min-width: 768px) {
-    .carousel .carousel-inner .controls {
-      top: 15em;
-      left: 30em; } }
-.carousel .carousel-inner .carousel-items {
-  width: 100vw; }
-  .carousel .carousel-inner .carousel-items .carousel-item {
-    display: none;
+.carousel .carousel-inner {
+  position: relative; }
+  .carousel .carousel-inner .controls {
     position: relative;
-    overflow: hidden;
-    width: 100%; }
-  .carousel .carousel-inner .carousel-items .active {
+    transform: translate(300px, 360px);
+    z-index: 10;
     display: flex; }
+    .carousel .carousel-inner .controls button {
+      z-index: 10;
+      flex: 0 0 auto;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: transparent; }
+    .carousel .carousel-inner .controls svg .background {
+      stroke: black;
+      fill: black;
+      stroke-width: 1px;
+      opacity: 0.6; }
+      .carousel .carousel-inner .controls svg .background:focus, .carousel .carousel-inner .controls svg .background:hover {
+        fill: #005a9c;
+        stroke: #005a9c;
+        opacity: 1; }
+    .carousel .carousel-inner .controls svg polygon {
+      fill: white;
+      stroke: white; }
+    @media screen and (min-width: 768px) {
+      .carousel .carousel-inner .controls {
+        transform: translate(840px, 534px); } }
+  .carousel .carousel-inner .carousel-items {
+    width: 100vw; }
+    .carousel .carousel-inner .carousel-items .carousel-item {
+      display: none;
+      position: relative; }
+    .carousel .carousel-inner .carousel-items .active {
+      display: flex; }
+    .carousel .carousel-inner .carousel-items .carousel-text {
+      padding: 10px;
+      max-width: 100%; }
+      @media screen and (min-width: 768px) {
+        .carousel .carousel-inner .carousel-items .carousel-text {
+          padding: 0 25px;
+          min-width: 40%; } }
 
 *,
 ::before,
@@ -215,11 +220,26 @@ body {
     .move-left-15em-md {
       right: 15em; } }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.border-red {
+  border: 4px solid red; }
+
+.border-blue {
+  border: 4px solid blue; }
+
 @media (scripting: enabled) {
   header a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: white; }
   header ul li {
     list-style-type: none; }
+
+  aside {
+    margin-top: 2em; }
 
   footer {
     position: relative;

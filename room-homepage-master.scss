@@ -67,13 +67,24 @@ body {
       right: 15em;
    }
 }
+.img-fluid{
+  max-width: 100%;
+  height:auto;
+  display: block; 
+}
+.border-red{
+  border:4px solid red;
+}
+.border-blue{
+  border: 4px solid blue;
+}
 @media (scripting: enabled) {
       
       header{
 
           a{
             text-decoration: none;
-            //color: white;
+            color: white;
           }
           ul li{
             list-style-type: none;
@@ -82,6 +93,9 @@ body {
       section{
           //width: fit-content;
           
+      }
+      aside{
+          margin-top: 2em;
       }
       footer{
               

@@ -23,6 +23,9 @@
 .justify-content-start{
     justify-content: start;
 }
+.justify-content-flex-end{
+    justify-content: flex-end;
+}
 .justify-content-space-between{
     justify-content: space-between;
 }
@@ -50,6 +53,9 @@
 .align-items-flex-start{
     align-items:flex-start;
 }
+align-items-flex-end{
+    align-items:flex-end;
+}
 .align-items-stretch{
     align-items:stretch;
 }
@@ -62,7 +68,11 @@
 .align-self-start{
     align-self:flex-start;
 }
-
+.flex-1-md{
+    @media screen and(min-width:768px){
+        flex: 1;
+    }
+}
 .flex-3-md{
     @media screen and(min-width:768px){
         flex: 3;
@@ -82,9 +92,7 @@
 .grow-4{
     flex-grow: 4;
 }
-.flex-1{
-    flex:1;
-}
+
 .flex-basis-25-md{
     @media screen and(min-width:768px){
         flex-basis: 25%;
