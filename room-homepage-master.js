@@ -17,45 +17,15 @@ function addListener(){
 	// Set up event listeners for next and previous buttons
     document.getElementById('nextBtn').addEventListener('click', nextSlide);
     document.getElementById('prevBtn').addEventListener('click', previousSlide);
-
-	[...document.querySelectorAll('.accordion-trigger')].forEach(function(btn) {
-		btn.addEventListener('click', function() {
-			/*const exp= btn.getAttribute('aria-expanded');
-			if(exp==='true'){
-				btn.setAttribute('aria-expanded','false');
-			}else{
-				btn.setAttribute('aria-expanded','true');
-			}*/
-		});
-	});
-	[...document.querySelectorAll('.tabbutton')].forEach(function(outerbtn) {
-
-        outerbtn.addEventListener('click', function() {
-			/*outerbtn.setAttribute('aria-current','page');
-			outerbtn.toggleAttribute('aria-selected');
-			const controls = outerbtn.getAttribute('aria-controls');
-			const el = document.querySelector(`#${controls}`);
-			//either tabcontent is showing already or not
-			//if showing, ignore 
-			if(!$(el).hasClass('is-hidden')){
-               //ignore
-			}else{
-               //so toggle tabcontent
-			   $(el).toggleClass('is-hidden');
-			   [...document.querySelectorAll('.tabbutton')].forEach(function(btn) {
-					//and hide the other tabs
-					if(btn!==outerbtn){
-					  const controls = btn.getAttribute('aria-controls');
-					  const el = document.querySelector(`#${controls}`);
-					  el.classList.add('is-hidden');
-					  el.setAttribute('hidden','true');
-				    }
-			    });
-			}*/
+}
+function offsetCalculate(){
+    [...document.querySelectorAll('.button-fix')].forEach(function(pic) {
+		$('.controls').css({
+			'top':pic.offsetTop + pic.offsetHeight,
+			'left': pic.offsetWidth,
 		});
 	});
 }
-
 
 function showSlide(index) {
   // Hide all carousel items
@@ -64,6 +34,7 @@ function showSlide(index) {
   });
   // Show the slide at the specified index
   data.carouselItems[index].style.display = 'flex';
+  offsetCalculate();
 }
 
 function nextSlide() {
@@ -78,7 +49,7 @@ function previousSlide() {
 
 
 $(window).on('load',function(){
-    
+    offsetCalculate();
 	addListener();
 	data.navBtn.addEventListener('click', function(){
 		$(data.navBar).toggleClass('is-active');

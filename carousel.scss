@@ -1,13 +1,18 @@
 
 
 .carousel {
-   
    .carousel-inner{
-          position:relative;
-          
+          //position:relative;
+          //display:flex;
+          //align-items:center;
+      
+
          .controls{
-             position: relative;
-             transform:translate(300px,360px);
+            position: absolute;
+             //transform:translate(92%,62vw);
+             @media screen and(max-width:384px){
+               //transform:translate(92%,62vw);
+             }
              z-index: 10;
              display: flex;
              
@@ -38,21 +43,20 @@
                 }
              }
              @media screen and(min-width: 768px){
-                transform:translate(840px, 534px);
+                //transform:translateX(65vw);
              }
          }
          .carousel-items{
                 width: 100vw;
                .carousel-item{
                  display: none;
-                 position: relative;
                }
               .active{
                  display:flex;
                }
                .carousel-text{
                    padding: 10px;
-                   max-width: 100%;
+                   max-width: 375px;
                    @media screen and(min-width:768px){
                      padding: 0 25px;
                      min-width: 40%;
@@ -60,7 +64,9 @@
                    
                }
          }
-         
+         @media screen and(min-width: 768px){
+           // align-items: flex-end;
+         }
          
    }
 }
