@@ -71,6 +71,9 @@ body {
    max-width: 100%;
    height:auto;
 }
+.smooth{
+  transition:all 4s ease-in-out;
+}
 @media (scripting: enabled) {
       
       header{
