@@ -20,15 +20,21 @@ function addListener(){
 }
 
 function offsetCalculate(index){
-	 console.log('in offset',index); 
+	 
     [...document.querySelectorAll('.button-fix')].forEach((pic,picindex)=> {
-		console.log('index',index, ' picindex',picindex);
+		console.log(pic.querySelector(':nth-child(2)'));
 		if(index===picindex){
+			if(window.innerWidth > 768){
 				$('.controls').css({
-					'top':pic.offsetTop + pic.offsetHeight,
+					'top':pic.offsetHeight - 34,
 					'left': pic.offsetWidth,
 				});
-				console.log('ok');
+			}else if(window.innerWidth <= 767){
+				$('.controls').css({
+					'top':pic.querySelector(':nth-child(2)').offsetHeight,
+					'left': pic.querySelector(':nth-child(2)').offsetWidth - (34*2),
+				});
+			}
 		}
 	});
 		
@@ -42,7 +48,7 @@ function showSlide(index) {
   // Show the slide at the specified index
   data.carouselItems[index].style.display = 'flex';
   data.carouselItems[index].classList.add('smooth');
-  console.log('in showslide',index);
+  //console.log('in showslide',index);
   offsetCalculate(index);
 }
 

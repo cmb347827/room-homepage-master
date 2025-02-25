@@ -174,11 +174,9 @@ align-items-flex-end {
   .carousel .carousel-inner .carousel-items .active {
     display: flex; }
   .carousel .carousel-inner .carousel-items .carousel-text {
-    padding: 10px;
     max-width: 375px; }
     @media screen and (min-width: 768px) {
       .carousel .carousel-inner .carousel-items .carousel-text {
-        padding: 0 25px;
         min-width: 40%; } }
 
 *,
@@ -216,6 +214,9 @@ body {
 .img-fluid {
   max-width: 100%;
   height: auto; }
+
+.smooth {
+  transition: all 4s ease-in-out; }
 
 @media (scripting: enabled) {
   header a {
