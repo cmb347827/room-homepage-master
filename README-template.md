@@ -52,7 +52,9 @@ Users should be able to:
 
 - I had some trouble keeping the buttons for the carousel in place , as they appear above the image/text in the carousel html, and 
   they had to appear steady in different positions for mobile and desktop. 
-  I figured out transform works with this.
+  I figured out 
+- Then it was a problem, keeping the buttons the same location still when resizing when I had to add padding to the texts.
+
 - Next, was the images that were the same but different sizes. I know that the `<picture>` element works for this, to force a change at different screensizes. Or `<img>` with `scrcet` can be used, but then it's up to the browswer to determine when to change the image. 
 
     

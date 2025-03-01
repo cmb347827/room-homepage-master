@@ -83,6 +83,12 @@ align-items-flex-end{
         flex: 2;
     }
 }
+.flex-noshrink-md-1{
+    @media screen and(min-width:768px){
+        flex-grow:1;
+        flex-shrink:0;
+    }
+}
 .flex-basis-25{
     flex-basis:25%;
 }

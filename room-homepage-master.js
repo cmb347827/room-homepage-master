@@ -22,7 +22,7 @@ function addListener(){
 function offsetCalculate(index){
 	 
     [...document.querySelectorAll('.button-fix')].forEach((pic,picindex)=> {
-		console.log(pic.querySelector(':nth-child(2)'));
+		
 		if(index===picindex){
 			if(window.innerWidth > 768){
 				$('.controls').css({
@@ -48,7 +48,6 @@ function showSlide(index) {
   // Show the slide at the specified index
   data.carouselItems[index].style.display = 'flex';
   data.carouselItems[index].classList.add('smooth');
-  //console.log('in showslide',index);
   offsetCalculate(index);
 }
 
