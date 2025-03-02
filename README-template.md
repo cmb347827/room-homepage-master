@@ -54,7 +54,7 @@ Users should be able to:
   they had to appear steady in different positions for mobile and desktop. 
   I figured out 
 - Then it was a problem, keeping the buttons the same location still when resizing when I had to add padding to the texts.
-
+- img-fluid, flex-noshrink-md-1, flex-basis-40-md, in the end  min-width/padding instead.
 - Next, was the images that were the same but different sizes. I know that the `<picture>` element works for this, to force a change at different screensizes. Or `<img>` with `scrcet` can be used, but then it's up to the browswer to determine when to change the image. 
 
     
