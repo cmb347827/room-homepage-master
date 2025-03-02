@@ -156,10 +156,7 @@ align-items-flex-end {
   .carousel .carousel-inner .controls button {
     z-index: 10;
     flex: 0 0 auto;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background: transparent; }
+    background-color: black; }
   .carousel .carousel-inner .controls svg .background {
     stroke: black;
     fill: black;
@@ -237,17 +234,22 @@ body {
     font-size: 0.9em; } }
   @media screen and (scripting: enabled) and (min-width: 768px) {
     section .carousel-text {
-      width: 40%; } }
+      padding: 30px 65px;
+      min-width: 40%; } }
   @media screen and (scripting: enabled) and (min-width: 990px) {
     section .carousel-text {
       font-size: 1.2em; } }
 
 @media (scripting: enabled) {
-  aside {
-    margin-top: 2em; }
+  aside #about {
+    padding: 5px;
+    max-width: 375px; } }
+  @media screen and (scripting: enabled) and (min-width: 768px) {
     aside #about {
-      padding: 5px;
-      max-width: 375px; }
+      padding: 25px;
+      min-width: 38%; } }
+
+@media (scripting: enabled) {
   footer {
     position: relative;
     top: 10em; } }
