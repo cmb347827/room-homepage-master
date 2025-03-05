@@ -68,6 +68,7 @@ align-items-flex-end{
 .align-self-start{
     align-self:flex-start;
 }
+
 .flex-1-md{
     @media screen and(min-width:768px){
         flex: 1;
@@ -81,6 +82,25 @@ align-items-flex-end{
 .flex-2-md{
     @media screen and(min-width:768px){
         flex: 2;
+    }
+}
+.me-1{
+    margin-right: 1em;
+}
+.me-2{
+    margin-right: 2em;
+}
+.margin-auto{
+    margin:0 auto;
+}
+.margin-0-md{
+    @media screen and(min-width:768px){
+        margin:0;
+    }
+}
+.me-1-md{
+    @media screen and(min-width: 768px){
+        margin-right:1em;
     }
 }
 .flex-noshrink-md-1{
@@ -125,15 +145,6 @@ align-items-flex-end{
     }
 }
 
-
-.me-2{
-    margin-right: 2em;
-}
-.me-1-md{
-    @media screen and(min-width: 768px){
-        margin-right: 1em;
-     }
-}
 .colRow{
     flex-direction:column;
     @media screen and(min-width:768px){
