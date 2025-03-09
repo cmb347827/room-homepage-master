@@ -103,6 +103,9 @@ align-items-flex-end{
         margin-right:1em;
     }
 }
+.mt-neg-1{
+    margin-top: -0.2em;
+}
 .flex-noshrink-md-1{
     @media screen and(min-width:768px){
         flex-grow:1;

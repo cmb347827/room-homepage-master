@@ -73,18 +73,32 @@ body {
 .move-left-15em-md{
    position:relative;
    @media screen and(min-width: 768px){
-      right: 20em;
+       right: 20em;
    }
 }
 
 .img-fluid{
    max-width: 100%;
    height:auto;
-   //aspect-ratio: 1 / 1;
 }
 .smooth{
   transition:all 4s ease-in-out;
 }
+.nav-class{
+    position:absolute;
+    top:-1.5em;
+    background-color: white;
+    width: 100vw;
+    padding:2em;
+    
+    a{
+      color: black;
+      margin-right: 1em;
+      font-weight:$font_weight-semibold;
+    }
+}
+
+
 @media (scripting: enabled) {
       h2{
          margin:0;
@@ -98,7 +112,7 @@ body {
          }
       }
       header{
-
+          
           a{
             text-decoration: none;
             color: white;
@@ -106,25 +120,39 @@ body {
           ul li{
             list-style-type: none;
           }
+          button{
+             background-color: transparent;
+             border:none;
+          }
+          #open,#close{
+             background-color: transparent;
+             transform: scale(1.8);
+             margin-left: 15px;
+             margin-top: 15px;
+          }
+          #close{
+             margin:0;
+             right: 150px;
+             bottom:150px;
+          }
       }
       section{
-          
-          .carousel-item{
-              
-              
-          }
+          margin-top: -2em;
+    
           .carousel-text{
-              width: 375px;
-              
+              min-width: 375px;
               padding: 15px;
               font-size: 0.9em;
               @media screen and(min-width: 768px){
                  padding: 30px 65px;
-                 min-width: 40%;
+                 max-width: 45vw;
               }
               @media screen and(min-width:990px){
                  font-size: 1.2em;
               }
+          }
+          @media screen and(min-width: 768px){
+              margin:0;
           }
       }
       aside{
@@ -134,7 +162,7 @@ body {
               width: 375px;
               @media screen and(min-width: 768px){
                 padding: 25px;
-                min-width: 38%;
+                width:45vw;
               }
           }
       }
