@@ -86,11 +86,10 @@ body {
 }
 .nav-class{
     position:absolute;
-    top:-1.5em;
+    top:0;
     background-color: white;
     width: 100vw;
-    padding:2em;
-    
+    padding: 2em;
     a{
       color: black;
       margin-right: 1em;
@@ -112,7 +111,13 @@ body {
          }
       }
       header{
-          
+          position:relative;
+          min-height: 50px;
+          nav{
+              position:relative;
+              top: 3em;
+              min-height: 50px;
+          }
           a{
             text-decoration: none;
             color: white;
@@ -126,19 +131,25 @@ body {
           }
           #open,#close{
              background-color: transparent;
+             position:relative;
              transform: scale(1.8);
-             margin-left: 15px;
-             margin-top: 15px;
+             margin-left: 25px;
+             margin-top: 25px;
           }
           #close{
              margin:0;
-             right: 150px;
-             bottom:150px;
+             left:0;
+             top:25px;
+             
+          }
+          .logo{
+             margin-top: 25px;
           }
       }
       section{
-          margin-top: -2em;
-    
+           position:relative;
+           margin-top: -2em;
+           min-height: 514px;
           .carousel-text{
               min-width: 375px;
               padding: 15px;
@@ -156,7 +167,7 @@ body {
           }
       }
       aside{
-          
+          min-height: 923px;
           #about{
               padding: 5px;
               width: 375px;

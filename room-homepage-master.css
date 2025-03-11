@@ -227,7 +227,7 @@ body {
 
 .nav-class {
   position: absolute;
-  top: -1.5em;
+  top: 0;
   background-color: white;
   width: 100vw;
   padding: 2em; }
@@ -249,26 +249,38 @@ body {
       aspect-ratio: auto; } }
 
 @media (scripting: enabled) {
-  header a {
-    text-decoration: none;
-    color: white; }
-  header ul li {
-    list-style-type: none; }
-  header button {
-    background-color: transparent;
-    border: none; }
-  header #open, header #close {
-    background-color: transparent;
-    transform: scale(1.8);
-    margin-left: 15px;
-    margin-top: 15px; }
-  header #close {
-    margin: 0;
-    right: 150px;
-    bottom: 150px; }
+  header {
+    position: relative;
+    min-height: 50px; }
+    header nav {
+      position: relative;
+      top: 3em;
+      min-height: 50px; }
+    header a {
+      text-decoration: none;
+      color: white; }
+    header ul li {
+      list-style-type: none; }
+    header button {
+      background-color: transparent;
+      border: none; }
+    header #open, header #close {
+      background-color: transparent;
+      position: relative;
+      transform: scale(1.8);
+      margin-left: 25px;
+      margin-top: 25px; }
+    header #close {
+      margin: 0;
+      left: 0;
+      top: 25px; }
+    header .logo {
+      margin-top: 25px; }
 
   section {
-    margin-top: -2em; }
+    position: relative;
+    margin-top: -2em;
+    min-height: 514px; }
     section .carousel-text {
       min-width: 375px;
       padding: 15px;
@@ -285,13 +297,15 @@ body {
       margin: 0; } }
 
 @media (scripting: enabled) {
-  aside #about {
-    padding: 5px;
-    width: 375px; } }
-  @media screen and (scripting: enabled) and (min-width: 768px) {
+  aside {
+    min-height: 923px; }
     aside #about {
-      padding: 25px;
-      width: 45vw; } }
+      padding: 5px;
+      width: 375px; } }
+    @media screen and (scripting: enabled) and (min-width: 768px) {
+      aside #about {
+        padding: 25px;
+        width: 45vw; } }
 
 @media (scripting: enabled) {
   footer {

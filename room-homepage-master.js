@@ -71,11 +71,6 @@ $(window).on('load',function(){
 	addListener();
 	data.navBtn.addEventListener('click', function(){
 		
-		/*if(!(data.navBar.classList.contains('nav-class')) && !(data.navBar.classList.contains('collapse-menu'))){
-			data.navBar.classList.add('nav-class','collapse-menu');
-		}else{
-			data.navBar.classList.remove('nav-class','collapse-menu');
-		}*/
 		if(!(data.navBar.classList.contains('collapse-menu'))){
 			data.navBar.classList.add('collapse-menu');
 		}else{
