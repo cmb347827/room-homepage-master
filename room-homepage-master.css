@@ -171,8 +171,6 @@ align-items-flex-end {
       background-color: black;
       width: 70px;
       height: 80px; }
-    .carousel .carousel-inner .controls svg {
-      transform: scale(3); }
   .carousel .carousel-inner .carousel-items .carousel-item {
     display: none; }
   .carousel .carousel-inner .carousel-items .active {
@@ -284,8 +282,12 @@ body {
       left: 0;
       top: 25px; }
     header .logo {
-      margin-top: 25px; }
+      margin-top: 25px; } }
+  @media screen and (scripting: enabled) and (min-width: 768px) {
+    header {
+      min-height: auto; } }
 
+@media (scripting: enabled) {
   section {
     position: relative;
     margin-top: -2em;
@@ -303,7 +305,8 @@ body {
         font-size: 1.2em; } }
   @media screen and (scripting: enabled) and (min-width: 768px) {
     section {
-      margin: 0; } }
+      margin: 0;
+      min-height: auto; } }
 
 @media (scripting: enabled) {
   aside {
@@ -315,6 +318,9 @@ body {
       aside #about {
         padding: 25px;
         width: 45vw; } }
+  @media screen and (scripting: enabled) and (min-width: 768px) {
+    aside {
+      min-height: auto; } }
 
 @media (scripting: enabled) {
   footer {
