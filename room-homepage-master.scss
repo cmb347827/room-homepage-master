@@ -48,6 +48,16 @@ body {
      weight: $font_weight-normal;
 	 family: "./fonts/League Spartan", serif;
   }
+  &:has(nav.nav-class){
+      z-index:99;
+      height:100vh;
+      width: 100vw;
+      opacity:0.8;
+      position:absolute;
+      top:0;
+      left:0;
+      @include bg-color(map-get($colors,Black),nth($fallback-colors,2));
+  }
 }
 .text-center{
     text-align:center;
@@ -81,15 +91,14 @@ body {
    max-width: 100%;
    height:auto;
 }
-.smooth{
-  transition:all 4s ease-in-out;
-}
+
 .nav-class{
     position:absolute;
     top:0;
     background-color: white;
     width: 100vw;
     padding: 2em;
+    transition:all 1s ease;
     a{
       color: black;
       margin-right: 1em;
