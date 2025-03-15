@@ -2,6 +2,7 @@
 
 $(window).resize(function(){
 	offsetCalculate(data.currentIndex);
+	lefttopElement(data.carouselPicRight,data.light_image);
 });
 
 
@@ -14,6 +15,8 @@ const data ={
 	 header: document.getElementById('header'),
 	 close: document.getElementById('close'),
 	 open: document.getElementById('open'),
+	 light_image:document.getElementById('light-image'),
+	 carouselPicRight:0,
 }
 
 
@@ -24,24 +27,44 @@ function addListener(){
 }
 
 function offsetCalculate(index){
-	 
+	 //to position the left/right arrow buttons
+	 //for each carousel item...
     [...document.querySelectorAll('.button-fix')].forEach((pic,picindex)=> {
-		
+		//if current carousel image from foreach is image that should is shown in showSlide()
 		if(index===picindex){
+			//either by desktop of mobile size, position the left/right arrow buttons., 
+			// without (index===picindex) left/right arrow buttons is only positioned for last image in carousel images.
 			if(window.innerWidth > 768){
 				$('.controls').css({
 					'top':pic.offsetHeight -85,
 					'left': pic.offsetWidth,
 				});
+				data.carouselPicRight= pic.getBoundingClientRect().right;
 			}else if(window.innerWidth <= 767){
 				$('.controls').css({
 					'top':pic.querySelector(':nth-child(2)').offsetHeight -85,
 					'left': pic.querySelector(':nth-child(2)').offsetWidth - (70* 2),
 				});
+				data.carouselPicRight= pic.getBoundingClientRect().right;
 			}
+		
 		}
 	});
-		
+	lefttopElement(data.carouselPicRight,data.light_image);
+}
+
+const lefttopElement=(elleft,elright)=>{
+   //light image on the right - carousel image on the left , distance is new width of .controls.
+   const controlsWidth=  elright.getBoundingClientRect().left - elleft;
+   if(controlsWidth>140){
+		$("#prevBtn").css({
+			width: `${controlsWidth/2}px`,
+		});
+		$("#nextBtn").css({
+			width: `${controlsWidth/2}px`,
+		});
+   }
+   console.log(controlsWidth);
 }
 
 function showSlide(index) {

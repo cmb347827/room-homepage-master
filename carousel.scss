@@ -16,9 +16,10 @@
                  background-color: black;
                  width: 70px;
                  height:80px;
-             }
-             svg{
-                //transform: scale(3);
+                 &:hover{
+                     background-color: hsl(0, 0%, 63%);
+                     border:none;
+                 }
              }
          }
          .carousel-items{

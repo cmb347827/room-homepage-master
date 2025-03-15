@@ -4,13 +4,15 @@
 @import 'carousel.scss';
 
 $colors: (
-  
   White: hsl(0,100%,100%),
   black: hsl(100,0%,0%),
+  Dark Gray: hsl(0, 0%, 63%),
+  Very Dark Gray: hsl(0, 0%, 27%),
+  Dark Gray2 : hsla(0, 0%, 63%,0.2),
 );
 
 $fallback-colors: (
-   Snow, black
+   Snow, black, DarkGray, DimGray, Gainsboro
 );
 
 @mixin background($url,$position:auto,$size:auto,$repeat:no-repeat,$fixed:fixed,$color:white){
@@ -46,7 +48,7 @@ body {
   font: {
      //font-size: 1em;
      weight: $font_weight-normal;
-	 family: "./fonts/League Spartan", serif;
+	   family: "./fonts/League Spartan", serif;
   }
   &:has(nav.nav-class){
       z-index:99;
@@ -56,8 +58,34 @@ body {
       position:absolute;
       top:0;
       left:0;
-      @include bg-color(map-get($colors,Black),nth($fallback-colors,2));
+      @include bg-color(map-get($colors,Dark Gray2),nth($fallback-colors,5));
   }
+}
+.sr-only{
+    //see https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034 
+    border: 0 !important;
+    clip-path: inset(50%) !important; /* 2 */
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    width: 1px !important;
+    white-space: nowrap !important; /* 3 */
+}
+.fontweight-semi{
+    font-weight: $font_weight-semibold;
+}
+.fontweight-ultrabold{
+    font-weight: $font_weight-ultrabold;
+}
+.font-size-2_3em{
+    font-size:2.3em;
+}
+.letter-space-0_5em{
+   letter-spacing:0.5em;
+}
+.letter-space-1em{
+  letter-spacing: 1rem;
 }
 .text-center{
     text-align:center;
@@ -121,15 +149,21 @@ body {
       }
       header{
           position:relative;
+          //added min-height to prevent content shifting.
           min-height: 50px;
           nav{
               position:relative;
-              top: 3em;
+              top: 2em;
               min-height: 50px;
           }
           a{
-            text-decoration: none;
-            color: white;
+              text-decoration: none;
+              color: white;
+              &:hover{
+                 text-decoration: underline;
+                 text-underline-offset: 1em;
+                 
+              }
           }
           ul li{
             list-style-type: none;
@@ -138,21 +172,14 @@ body {
              background-color: transparent;
              border:none;
           }
-          #open,#close{
+          #open{
              background-color: transparent;
-             position:relative;
              transform: scale(1.8);
              margin-left: 25px;
-             margin-top: 25px;
           }
           #close{
-             margin:0;
-             left:0;
-             top:25px;
+             transform:scale(1.8);
              
-          }
-          .logo{
-             margin-top: 25px;
           }
           @media screen and(min-width:768px){
             min-height:auto;
@@ -162,10 +189,19 @@ body {
            position:relative;
            margin-top: -2em;
            min-height: 514px;
+          
           .carousel-text{
               min-width: 375px;
-              padding: 15px;
+              padding: 25px;
               font-size: 0.9em;
+              button{
+                  &:hover{
+                    @include font-color(map-get($colors,Dark Gray),nth($fallback-colors,3));
+                  }
+              }
+              button:has(:hover)  svg path {
+                  fill: map-get($colors,Dark Gray);
+              }
               @media screen and(min-width: 768px){
                  padding: 30px 65px;
                  max-width: 45vw;
@@ -182,8 +218,8 @@ body {
       aside{
           min-height: 923px;
           #about{
-              padding: 5px;
-              width: 375px;
+              padding: 25px;
+              width:fit-content;
               @media screen and(min-width: 768px){
                 padding: 25px;
                 width:45vw;
