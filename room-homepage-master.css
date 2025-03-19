@@ -177,7 +177,8 @@ align-items-flex-end {
       flex: 0 0 auto;
       background-color: black;
       width: 70px;
-      height: 80px; }
+      height: 80px;
+      padding: 0; }
       .carousel .carousel-inner .controls button:hover {
         background-color: #a1a1a1;
         border: none; }
@@ -199,7 +200,9 @@ body {
   color: black;
   color: black;
   font-weight: 400;
-  font-family: "./fonts/League Spartan", serif; }
+  font-family: "./fonts/League Spartan", serif;
+  padding: 0;
+  margin: 0; }
   html:has(nav.nav-class),
   body:has(nav.nav-class) {
     z-index: 99;
@@ -290,7 +293,7 @@ body {
     transform: scale(1); } }
 .smooth-slide {
   display: flex;
-  animation: fade_in_show 3.5s; }
+  animation: fade_in_show 0.5s; }
 
 @media (scripting: enabled) {
   h2 {
@@ -311,7 +314,8 @@ body {
     header nav {
       position: relative;
       top: 2em;
-      min-height: 50px; }
+      min-height: 50px;
+      left: 25px; }
     header a {
       text-decoration: none;
       color: white; }
@@ -345,7 +349,7 @@ body {
       section .carousel-text button:hover {
         color: DarkGray;
         color: #a1a1a1; }
-      section .carousel-text button:has(:hover) svg path {
+      section .carousel-text button:hover + svg path {
         fill: #a1a1a1; } }
     @media screen and (scripting: enabled) and (min-width: 768px) {
       section .carousel-text {

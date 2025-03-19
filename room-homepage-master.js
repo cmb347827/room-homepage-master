@@ -2,7 +2,7 @@
 
 $(window).resize(function(){
 	offsetCalculate(data.currentIndex);
-	lefttopElement(data.carouselPicRight,data.light_image);
+	//lefttopElement(data.carouselPicRight,data.light_image);
 });
 
 
@@ -27,42 +27,47 @@ function addListener(){
 }
 
 function offsetCalculate(index){
-	 //to position the left/right arrow buttons
+	 //is to position the left/right arrow buttons
 	 //for each carousel item...
     [...document.querySelectorAll('.button-fix')].forEach((pic,picindex)=> {
 		//if current carousel image from foreach is image that should is shown in showSlide()
 		if(index===picindex){
+			
 			//either by desktop of mobile size, position the left/right arrow buttons., 
 			// without (index===picindex) left/right arrow buttons is only positioned for last image in carousel images.
-			if(window.innerWidth > 768){
+			if(window.innerWidth >= 768){
 				$('.controls').css({
 					'top':pic.offsetHeight -85,
 					'left': pic.offsetWidth,
 				});
-				data.carouselPicRight= pic.getBoundingClientRect().right;
+				data.carouselPicRight= pic.offsetWidth;
 			}else if(window.innerWidth <= 767){
 				$('.controls').css({
 					'top':pic.querySelector(':nth-child(2)').offsetHeight -85,
 					'left': pic.querySelector(':nth-child(2)').offsetWidth - (70* 2),
 				});
-				data.carouselPicRight= pic.getBoundingClientRect().right;
+				data.carouselPicRight= pic.querySelector(':nth-child(2)').offsetWidth - (70* 2);
 			}
 		
 		}
 	});
+	
 	lefttopElement(data.carouselPicRight,data.light_image);
 }
 
 const lefttopElement=(elleft,elright)=>{
-   //light image on the right - carousel image on the left , distance is new width of .controls.
-   const controlsWidth=  elright.getBoundingClientRect().left - elleft;
+   //is to set/update the width of the left/right arrow buttons
+   //on screen the light image is on the right - and the carousel image on the left , difference between distance is new width of .controls.
+   let controlsWidth=  elright.getBoundingClientRect().left - elleft;
+   
+
    if(controlsWidth>140){
-		$("#prevBtn").css({
-			width: `${controlsWidth/2}px`,
-		});
-		$("#nextBtn").css({
-			width: `${controlsWidth/2}px`,
-		});
+		$("#prevBtn").css(
+			'width', `${controlsWidth/2}px`,
+		);
+		$("#nextBtn").css(
+			'width', `${controlsWidth/2}px`,
+		);
    }
 }
 
@@ -70,6 +75,7 @@ function showSlide(index) {
 	// Hide all carousel items
 	data.carouselItems.forEach((item,innerindex)=> {
 			if(index===innerindex){
+				//is the slide that should be shown, update it's included classes , without carousel-item class and with smooth-slide class.
 				item.className = 'smooth-slide colRow';
 			}else{
 				item.className = 'carousel-item colRow'
@@ -91,7 +97,8 @@ function previousSlide() {
 
 
 $(window).on('load',function(){
-    offsetCalculate(0);
+	
+    offsetCalculate(data.currentIndex);
 	addListener();
 	data.navBtn.addEventListener('click', function(){
 		
