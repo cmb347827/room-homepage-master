@@ -1,4 +1,16 @@
 
+@keyframes fade_in_show {
+    0% {
+         opacity: 0;
+         transform: scale(0)
+    }
+
+    100% {
+         opacity: 1;
+         transform: scale(1)
+    }
+}
+
 
 .carousel {
     position:relative;
@@ -25,10 +37,12 @@
          .carousel-items{
                 
                .carousel-item{
-                  display: none;
+                    display:none;
                }
+            
               .active{
-                 display:flex;
+                    display:flex;
+                    animation: fade_in_show 0.5s;
                }
          }
          

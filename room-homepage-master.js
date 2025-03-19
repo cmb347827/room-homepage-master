@@ -64,18 +64,19 @@ const lefttopElement=(elleft,elright)=>{
 			width: `${controlsWidth/2}px`,
 		});
    }
-   console.log(controlsWidth);
 }
 
 function showSlide(index) {
-  // Hide all carousel items
-  data.carouselItems.forEach(item => {
-    item.style.display = 'none';
-  });
-  // Show the slide at the specified index
-  data.carouselItems[index].style.display = 'flex';
-  data.carouselItems[index].classList.add('smooth');
-  offsetCalculate(index);
+	// Hide all carousel items
+	data.carouselItems.forEach((item,innerindex)=> {
+			if(index===innerindex){
+				item.className = 'smooth-slide colRow';
+			}else{
+				item.className = 'carousel-item colRow'
+			}
+	});
+	// Show the slide at the specified index
+	offsetCalculate(index);
 }
 
 function nextSlide() {
