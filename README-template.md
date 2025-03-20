@@ -56,7 +56,9 @@ Users should be able to:
 - Next, I had a hard time to make sure when resizing the screen, that the top carousel section and bottom aside section kept the same width, and that the text in the aside section didn't spill out beneath the images height. I tried a combination of using '.  img-fluid' , '.flex-noshrink-md-1', and '.flex-basis-40-md' . In the end  just using `.img-fluid` for the aside images, and `.flex-noshrink-md-1` for both the carousel text and aside text , in combination with setting width for the carousel text, worked.
 - Next, was the images that were the same but different sizes. I know that the `<picture>` element works for this, to force a change at different screensizes. Or `<img>` with `scrcet` can be used, but then it's up to the browswer to determine when to change the image. 
 - I had to figure out how to resize the left/right arrow svg. First I tried this by simply adding padding to the svg, but this did not work , as the svg dissapeared. I tried by adding `transform: scale(3);` to the svg, and by adding a larger width/height value than the svg width/height to the parent button element, and this worked.
-- I used the W3 carousel pattern.
+- I used the W3 carousel pattern , the html pattern, for the carousel.
+- I added two bonus features: The left/right arrow button , is to be minimum 140px wide, then it fits between the right edge of the carousel image and the left edge of the light image. If a user resizes the screen the button will resize to it remains that relative width. It will grow/shrink to fit it.  I used JS to add this feature.Also, when the user clicks the left/right carousel button, the image will load in an animation. I used SCSS/CSS for this.
+
 
     
  

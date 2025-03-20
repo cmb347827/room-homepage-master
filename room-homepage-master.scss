@@ -208,7 +208,7 @@ body {
            position:relative;
            margin-top: -2em;
            min-height: 514px;
-          
+           
           .carousel-text{
               min-width: 375px;
               padding: 25px;
@@ -233,6 +233,13 @@ body {
           @media screen and(min-width: 768px){
               margin:0;
               min-height:auto;
+              picture{
+                  min-width:840px;
+                  min-height:534px;
+              }
+              source{
+                 object-fit:cover;
+              }
           }
       }
       aside{
