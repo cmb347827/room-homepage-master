@@ -58,8 +58,7 @@ Users should be able to:
 - I had to figure out how to resize the left/right arrow svg. First I tried this by simply adding padding to the svg, but this did not work , as the svg dissapeared. I tried by adding `transform: scale(3);` to the svg, and by adding a larger width/height value than the svg width/height to the parent button element, and this worked.
 - I used the W3 carousel pattern , the html pattern, for the carousel.
 - I added two bonus features: The left/right arrow button , is to be minimum 140px wide, then it fits between the right edge of the carousel image and the left edge of the light image. If a user resizes the screen the button will resize to it remains that relative width. It will grow/shrink to fit it.  I used JS to add this feature.Also, when the user clicks the left/right carousel button, the image will load in an animation. I used SCSS/CSS for this.
-
-
+- Then when I submitted the project I got this error:"Attribute "width" not allowed on element "source" at this point" , I got the same error for the source height attribute.  I remember seeing these attributes add to `<source>` in so many tutorials (link 5), that I went to the HTML standard site (see link 3), and saw the same thing mentioned, width/height in `<source>` element. See also (link 4).  I removed the width/height attribute for the first `.carousel-item` . And applied `srcset="./images/desktop-image-hero-1.jpg  840w"`  with the width specified, and `sizes="40vw"` with a viewport width specified , the amount of space the image should occupy in desktop view.  I had to adjust the height for the left/right arrow button , this was partly done in the `carousel.scss` file (went from `height='80'` to `height='30'`) and partly in the js file (line 40, went from -85 to -35 ).  This worked, up to a point. I felt frustrated, with trying to make this work and decided to validate my code at https://validator.w3.org/.  My code validated on 3/21/2025. All green. So it seems strange. For a final test, I checked out 'can I use' (see link 6). It was all green for all recent brouwsers (I entered source width). So I decided in the end to go with removing the height attribute , and added some code in the scss file (from line 236), and keeping the width attribute, and changed the button code in my js/scss files back to what it was.
     
  
 ### Continued development
@@ -71,6 +70,13 @@ Users should be able to:
  [Position of an element relative to another that's not it's parent](https://stackoverflow.com/questions/55719056/position-an-element-relative-to-another-that-is-not-its-parent)
 
  [the use off offsetHeight](https://stackoverflow.com/questions/50281786/how-to-use-element-offsetbottom)
+
+ [the source element](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element)
+
+ [width heigh attributes](https://html.spec.whatwg.org/multipage/embedded-content-other.html#attr-dim-width)
+
+[width height in source](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement/width)
+[can I use source width](https://caniuse.com/mdn-html_elements_source_width)
 
 
 ## Author

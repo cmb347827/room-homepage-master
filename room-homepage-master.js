@@ -37,7 +37,7 @@ function offsetCalculate(index){
 			// without (index===picindex) left/right arrow buttons is only positioned for last image in carousel images.
 			if(window.innerWidth >= 768){
 				$('.controls').css({
-					'top':pic.offsetHeight -85,
+					'top':pic.offsetHeight -80,
 					'left': pic.offsetWidth,
 				});
 				data.carouselPicRight= pic.offsetWidth;

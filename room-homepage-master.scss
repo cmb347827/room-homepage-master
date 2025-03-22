@@ -148,7 +148,7 @@ body {
 }
 .smooth-slide{
      display:flex;
-     animation: fade_in_show 0.5s;
+     animation: fade_in_show 0.3s;
       
 }
 
@@ -234,8 +234,8 @@ body {
               margin:0;
               min-height:auto;
               picture{
-                  min-width:840px;
-                  min-height:534px;
+                  width:840px;
+                  height:534px;
               }
               source{
                  object-fit:cover;
