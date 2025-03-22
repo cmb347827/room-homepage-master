@@ -35,6 +35,7 @@ function offsetCalculate(index){
 			
 			//either by desktop of mobile size, position the left/right arrow buttons., 
 			// without (index===picindex) left/right arrow buttons is only positioned for last image in carousel images.
+			// see carousel.scss button width/height for values used below 
 			if(window.innerWidth >= 768){
 				$('.controls').css({
 					'top':pic.offsetHeight -80,
@@ -43,7 +44,7 @@ function offsetCalculate(index){
 				data.carouselPicRight= pic.offsetWidth;
 			}else if(window.innerWidth <= 767){
 				$('.controls').css({
-					'top':pic.querySelector(':nth-child(2)').offsetHeight -85,
+					'top':pic.querySelector(':nth-child(2)').offsetHeight -80,
 					'left': pic.querySelector(':nth-child(2)').offsetWidth - (70* 2),
 				});
 				data.carouselPicRight= pic.querySelector(':nth-child(2)').offsetWidth - (70* 2);
@@ -61,14 +62,14 @@ const lefttopElement=(elleft,elright)=>{
    let controlsWidth=  elright.getBoundingClientRect().left - elleft;
    
 
-   if(controlsWidth>140){
+   
 		$("#prevBtn").css(
 			'width', `${controlsWidth/2}px`,
 		);
 		$("#nextBtn").css(
 			'width', `${controlsWidth/2}px`,
 		);
-   }
+   
 }
 
 function showSlide(index) {
