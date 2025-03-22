@@ -189,7 +189,8 @@ align-items-flex-end {
   .carousel .carousel-inner .carousel-items .carousel-item {
     display: none; }
   .carousel .carousel-inner .carousel-items .active {
-    display: flex; }
+    display: flex;
+    animation: fade_in_show 0.3s; }
 
 *,
 ::before,
@@ -295,7 +296,8 @@ body {
     opacity: 1;
     transform: scale(1); } }
 .smooth-slide {
-  display: flex; }
+  display: flex;
+  animation: fade_in_show 0.3s; }
 
 @media (scripting: enabled) {
   h2 {

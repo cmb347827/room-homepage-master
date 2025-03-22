@@ -62,14 +62,14 @@ const lefttopElement=(elleft,elright)=>{
    let controlsWidth=  elright.getBoundingClientRect().left - elleft;
    
 
-   
+   if(controlsWidth>140){
 		$("#prevBtn").css(
 			'width', `${controlsWidth/2}px`,
 		);
 		$("#nextBtn").css(
 			'width', `${controlsWidth/2}px`,
 		);
-   
+   }
 }
 
 function showSlide(index) {
