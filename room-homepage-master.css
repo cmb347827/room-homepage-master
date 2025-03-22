@@ -189,8 +189,7 @@ align-items-flex-end {
   .carousel .carousel-inner .carousel-items .carousel-item {
     display: none; }
   .carousel .carousel-inner .carousel-items .active {
-    display: flex;
-    animation: fade_in_show 0.3s; }
+    display: flex; }
 
 *,
 ::before,
@@ -296,8 +295,7 @@ body {
     opacity: 1;
     transform: scale(1); } }
 .smooth-slide {
-  display: flex;
-  animation: fade_in_show 0.3s; }
+  display: flex; }
 
 @media (scripting: enabled) {
   h2 {
@@ -319,7 +317,7 @@ body {
       position: relative;
       top: 2em;
       min-height: 50px;
-      left: 25px; }
+      left: 45px; }
     header a {
       text-decoration: none;
       color: white; }
