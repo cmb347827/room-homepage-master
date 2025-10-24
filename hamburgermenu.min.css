@@ -1,0 +1,2 @@
+@media screen and (max-width: 48em){ul{display:none}ul.collapse-menu{display:flex;flex-direction:row;justify-content:flex-end}}@media screen and (min-width: 48em){.menubutton{display:none}.navbarCollapse{display:flex;flex-direction:row;justify-content:space-between;align-items:center}}
+/*# sourceMappingURL=hamburgermenu.min.css.map */

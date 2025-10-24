@@ -1,20 +1,22 @@
 'use strict'; 
 
 $(window).resize(function(){
+	location.reload();
 	offsetCalculate(data.currentIndex);
 	//lefttopElement(data.carouselPicRight,data.light_image);
+	
 });
 
 
 const data ={
-	 navBtn: document.getElementById('menubutton'),
-	 navBar: document.getElementById('navbarCollapse'),
-	 nav: document.getElementById('nav'),
+	 navBtn: document.querySelector('.menubutton'),
+	 navBar: document.querySelector('.navbarCollapse'),
+	 nav: document.querySelector('.nav'),
 	 currentIndex: 0,
 	 carouselItems : document.querySelectorAll('.carousel-item'),
-	 header: document.getElementById('header'),
-	 close: document.getElementById('close'),
-	 open: document.getElementById('open'),
+	 header: document.querySelector('header'),
+	 close: document.querySelector('.close'),
+	 open: document.querySelector('.open'),
 	 light_image:document.getElementById('light-image'),
 	 carouselPicRight:0,
 }
@@ -61,7 +63,6 @@ const lefttopElement=(elleft,elright)=>{
    //on screen the light image is on the right - and the carousel image on the left , difference between distance is new width of .controls.
    let controlsWidth=  elright.getBoundingClientRect().left - elleft;
    
-
    if(controlsWidth>140){
 		$("#prevBtn").css(
 			'width', `${controlsWidth/2}px`,
@@ -85,6 +86,7 @@ function showSlide(index) {
 	// Show the slide at the specified index
 	offsetCalculate(index);
 }
+
 
 function nextSlide() {
   data.currentIndex = ((data.currentIndex + 1) <= (data.carouselItems.length-1)) ? ++data.currentIndex : 0;

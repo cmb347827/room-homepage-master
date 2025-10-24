@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px){
+@media screen and (max-width: 48em){
     ul {
         display: none;
       }
@@ -14,11 +14,11 @@
     //filter:brightness(0) saturate(100%) invert(92%) sepia(3%) saturate(3990%) hue-rotate(191deg) brightness(106%) contrast(105%);
 }
 
-@media screen and(min-width:767px){
-        #menubutton{
+@media screen and(min-width:48em){
+        .menubutton{
             display:none;
         }
-        #navbarCollapse{
+        .navbarCollapse{
             display:flex;
             flex-direction:row;
             justify-content: space-between;
