@@ -42,6 +42,7 @@ $fallback-colors: (
  {
    box-sizing: border-box;
 }
+
 :where(html,
 body) {
   @include bg-color(map-get($colors,White),nth($fallback-colors,1));
@@ -94,6 +95,7 @@ body) {
 
 
 
+
 //specifity 0,0,1
 h2{
     margin:0;
@@ -124,67 +126,25 @@ section{
     position:relative;
     margin-top: -2em;
     min-height: 32.125em;
-        
-      
     @media screen and(min-width: 48em){
         margin:0;
-        //min-height:auto;
-        picture{                                                                        
-            width:52.5em;
-            height:33.375em;
-        }
-        source{
-            object-fit:cover;
-        }
     }
 }
-header{
-    position:relative;
-    //added min-height to prevent content shifting.
-    min-height: 3.125em;
-    nav{
-        position:relative;
-        top: 2em;
-        min-height: 3.125em;
-    }
-    li{
-      list-style-type: none;
-    }
-    button{
-        background-color: transparent;
-        border:none;
-    }
-    a{
-        text-decoration: none;
-        color: white;
-        &:hover{
-            text-decoration: underline;
-            text-underline-offset: 1em;
-          
-        }
-        @media screen and (max-width:48em){
-             color:black;
-             margin-right: 1em;
-             font-weight:gl.$font_weight-semibold;
-        }
-    }
-    .open{
-        background-color: transparent;
-        transform: scale(1.8);
-        margin-left: 1.5625em;
-    }
-    .close{
-        transform:scale(1.8);
-        
-    }
-    @media screen and(min-width:48em){
-      min-height:auto;
-    }
-}
+
+
 
 
 
 //specicity 0,1,0
+.open{
+    background-color: transparent;
+    transform: scale(1.8);
+    margin-left: 1.5625em;
+}
+.close{
+    transform:scale(1.8);
+  
+}
 .fontweight-semi{
     font-weight: gl.$font_weight-semibold;
 }
@@ -209,7 +169,18 @@ header{
 .no-border{
     border:none;
 }
-
+.carousel-text{
+     min-width: 23.4375em;
+     padding: 1.5625em;
+     font-size: 0.9em;
+    @media screen and(min-width: 48em){
+        padding: 1.875em 4.0625em;
+        max-width: 45vw;
+    }
+    @media screen and(min-width:61.875em){
+        font-size: 1.1em;
+    }
+}
 .bg-white{
    background-color: white;
 }
@@ -265,29 +236,71 @@ header{
     
 }
 
-.carousel-text{
-      min-width: 23.4375em;
-      padding: 1.5625em;
-      font-size: 0.9em;
-      button{
-          &:hover{
-            @include font-color(map-get($colors,Dark Gray),nth($fallback-colors,3));
-          }
+
+
+
+
+//specifity 0,0,2
+ @media screen and(min-width: 48em){
+      section picture{                                                                        
+          width:52.5em;
+          height:33.375em;
       }
-      button:hover + svg path {
-          fill: map-get($colors,Dark Gray);
-          
+      section source{
+          object-fit:cover;
       }
-      @media screen and(min-width: 48em){
-          padding: 1.875em 4.0625em;
-          max-width: 45vw;
+ }
+header{
+    position:relative;
+    //added min-height to prevent content shifting.
+    min-height: 3.125em;
+    nav{
+        position:relative;
+        top: 2em;
+        min-height: 3.125em;
+    }
+    li{
+      list-style-type: none;
+    }
+    button{
+        background-color: transparent;
+        border:none;
+    }
+    
+    @media screen and(min-width:48em){
+      min-height:auto;
+    }
+}
+
+
+
+//specifity 0,0,2  to 0,1,2
+header a{
+      text-decoration: none;
+      color: white;
+      @media screen and (max-width:48em){
+            color:black;
+            margin-right: 1em;
+            font-weight:gl.$font_weight-semibold;
       }
-      @media screen and(min-width:61.875em){
-          font-size: 1.1em;
+      &:hover{
+          text-decoration: underline;
+          text-underline-offset: 1em;
+        
       }
 }
-      
 
+
+
+//specifitiy 0,2,1 to 0,2,3
+.carousel-text button{
+      &:hover{
+        @include font-color(map-get($colors,Dark Gray),nth($fallback-colors,3));
+      }
+}
+.carousel-text button:hover + svg path {
+      fill: map-get($colors,Dark Gray);
+}
 
 
 

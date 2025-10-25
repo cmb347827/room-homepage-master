@@ -40,16 +40,16 @@ function offsetCalculate(index){
 			// see carousel.scss button width/height for values used below 
 			if(window.innerWidth >= 768){
 				$('.controls').css({
-					'top':pic.offsetHeight -80,
-					'left': pic.offsetWidth,
+					'top':pic.offsetHeight -65,
+					'left': pic.offsetWidth ,
 				});
 				data.carouselPicRight= pic.offsetWidth;
 			}else if(window.innerWidth <= 767){
 				$('.controls').css({
-					'top':pic.querySelector(':nth-child(2)').offsetHeight -80,
-					'left': pic.querySelector(':nth-child(2)').offsetWidth - (70* 2),
+					'top':pic.querySelector(':nth-child(2)').offsetHeight -65,
+					'left': pic.querySelector(':nth-child(2)').offsetWidth - (60* 2),
 				});
-				data.carouselPicRight= pic.querySelector(':nth-child(2)').offsetWidth - (70* 2);
+				data.carouselPicRight= pic.querySelector(':nth-child(2)').offsetWidth - (60* 2);
 			}
 		
 		}
