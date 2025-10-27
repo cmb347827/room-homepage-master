@@ -10,7 +10,7 @@ $(window).resize(function(){
 
 const data ={
 	 navBtn: document.querySelector('.menubutton'),
-	 navBar: document.querySelector('.navbarCollapse'),
+	 navBar: document.querySelector('#navbarCollapse'),
 	 nav: document.querySelector('.nav'),
 	 currentIndex: 0,
 	 carouselItems : document.querySelectorAll('.carousel-item'),
