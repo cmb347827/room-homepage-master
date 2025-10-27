@@ -1,7 +1,7 @@
-@use 'globals' as gl;
-@use 'flexgrid';
-@use 'hamburgermenu';
-@use 'carousel';
+@use './globals/globals' as gl;
+@use './flexgrid/flexgrid';
+@use './hamburgermenu/hamburgermenu';
+@use './carousel/carousel';
 
 $colors: (
   White: hsl(0,100%,100%),

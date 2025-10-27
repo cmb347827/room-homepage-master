@@ -15,3 +15,16 @@
 .DS_Store
 
 .prettierignore
+
+
+.carousel.min.css
+.carousel.min.css.map
+
+.flexgrid.min.css
+.flexgrid.min.css.map
+
+.globals.min.css
+.globals.min.css.map
+
+.hamburgermenu.min.css
+.hamburgermenu.min.css.map
