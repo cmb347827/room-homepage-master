@@ -59,8 +59,16 @@ Users should be able to:
 - I used the W3 carousel pattern , the html pattern, for the carousel.
 - I added two bonus features: The left/right arrow button , is to be minimum 140px wide, then it fits between the right edge of the carousel image and the left edge of the light image. If a user resizes the screen the button will resize to it remains that relative width. It will grow/shrink to fit it.  I used JS to add this feature.Also, when the user clicks the left/right carousel button, the image will load in an animation. I used SCSS/CSS for this.
 - Then when I submitted the project I got this error:"Attribute "width" not allowed on element "source" at this point" , I got the same error for the source height attribute.  I remember seeing these attributes add to `<source>` in so many tutorials (link 5), that I went to the HTML standard site (see link 3), and saw the same thing mentioned, width/height in `<source>` element. See also (link 4).  I removed the width/height attribute for the first `.carousel-item` . And applied `srcset="./images/desktop-image-hero-1.jpg  840w"`  with the width specified, and `sizes="40vw"` with a viewport width specified , the amount of space the image should occupy in desktop view.  I had to adjust the height for the left/right arrow button , this was partly done in the `carousel.scss` file (went from `height='80'` to `height='30'`) and partly in the js file (line 40, went from -85 to -35 ).  This worked, up to a point. I felt frustrated, with trying to make this work and decided to validate my code at https://validator.w3.org/.  My code validated on 3/21/2025. All green. So it seems strange. For a final test, I checked out 'can I use' (see link 6). It was all green for all recent brouwsers (I entered source width). So I decided in the end to go with removing the height attribute , and added some code in the scss file (from line 236), and keeping the width attribute, and changed the button code in my js/scss files back to what it was.
-    
+- I validated the CSS file at 'https://jigsaw.w3.org/css-validator/#validate_by_upload' on 10/27/25 and 'Congratulations! No Error Found.'
+  I validated the html file at 'https://validator.w3.org/#validate_by_upload' on 10/27/25 and 'Document checking completed. No errors or warnings to show This document validates as CSS level 3 + SVG !' .
+  Finally , I did a Lighthouse report check on 10/27/25 and this was the result for mobile:
+  100 in performance,100 in accessibility, 92 in best practices, and 100 in seo.
+  and for desktop:  100 in performance , 100 in accessibility, 96 in best practices and 100 in seo.
+
+  I wasted too much time trying to get a 'perfect' or better score at frontendmentor reports, and just in general, but as this is a learning experience, I will inevitably make mistakes and keep learning anyway. Compared to my newbie projects I'm sure there's a decent improvement.
  
+
+
 ### Continued development
 
 - Daily tutorials and projects in HTML5, CSS3, Javascript, Bootstrap, Sass/SCSS. For now, in time I will go re-learn React ect.
